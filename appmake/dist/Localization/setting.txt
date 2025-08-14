@@ -1,3 +1,0 @@
-﻿Thai = ua
-English = en
-Русский = ru

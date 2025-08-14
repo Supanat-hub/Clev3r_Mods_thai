@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x64\signtool.exe" sign /f "C:\Windows\System32\CleverCert.pfx" /p "4955" /tr http://timestamp.digicert.com /td sha256 /fd sha256 "C:\Users\12pon\Desktop\appmake\clever_setup.exe"
