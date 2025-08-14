@@ -65,6 +65,16 @@
       <param name="isBreak">เบรกหรือไม่ "True"/"False".</param>
     </member>
 
+    <member name="M:spinSee">
+      <summary>
+        sync มอเตอร์ BC ให้เดินจนเจอค่าแสงที่ตั้ง.
+      </summary>
+      <param name="kP">Proportional gain set. [แนะนำที่ 0.9 - 0.12]</param>
+      <param name="power">ความเร็วเดิน.</param>
+      <param name="blackValue">กำหนดค่าแสง.</param>
+      <param name="isBreak">เบรกหรือไม่ "True"/"False".</param>
+    </member>
+
     <member name="M:lineTrack">
       <summary>
         เดินตามเส้น 2 เซนเซอร์.

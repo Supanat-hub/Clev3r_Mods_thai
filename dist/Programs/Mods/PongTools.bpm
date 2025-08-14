@@ -74,9 +74,44 @@ Function syncMoveSee(in number kP, in number port, in number power, in number bl
     AdvMtCtrls.Sync(enc1, enc2, p1Out, p2Out)
     Motor.StartPower("B", p1Out)
     Motor.StartPower("C", p2Out)
-    bv = Color.getLight(port, lightOut)
-    If bv <= blackValue Then
+    Color.getLight(port, lightOut)
+    If lightOut <= blackValue Then
       done = 1
+    EndIf
+    Program.Delay(10)
+  EndWhile
+  Motor.Stop("BC", isBreak)
+EndFunction
+
+Function spinSee(in number kP, in number power, in number blackValue, in string isBreak)
+  AdvMtCtrls.Sync_Config(kp, power, power*-1)
+  Motor.ResetCount("BC")
+  port = 2
+  if power < 0 Then
+    port = 1
+  EndIf
+  done = 0
+  While done = 0
+    enc1 = Motor.GetCount("B")
+    enc2 = Motor.GetCount("C")
+    AdvMtCtrls.Sync(enc1, enc2, p1Out, p2Out)
+    Motor.StartPower("B", p1Out)
+    Motor.StartPower("C", p2Out)
+    Color.getLight(port, lightOut)
+    If lightOut <= blackValue Then
+      done = 1
+    EndIf
+    Program.Delay(10)
+  EndWhile
+  While done = 1
+    enc1 = Motor.GetCount("B")
+    enc2 = Motor.GetCount("C")
+    AdvMtCtrls.Sync(enc1, enc2, p1Out, p2Out)
+    Motor.StartPower("B", p1Out)
+    Motor.StartPower("C", p2Out)
+    Color.getLight(port, lightOut)
+    If lightOut >= blackValue+10 Then
+      done = 0
     EndIf
     Program.Delay(10)
   EndWhile
@@ -100,13 +135,22 @@ Function lineTrack(in number kP, in number kD, in number power, in number totalD
 EndFunction
 
 Function smoothLineTrack(in number kP, in number kD, in number minPower, in number maxPower, in number totalDist)
-  AdvMtCtrls.AccTwoEnc_Config(minPower, maxPower, totalDist*0.3, totalDist*0.3, totalDist)
+  If totalDist*0.5 >= 300 Then
+    accDist = 300
+    decDist = 300
+  Else
+    accDist = totalDist*0.5
+    decDist = totalDist*0.5
+  EndIf
+  AdvMtCtrls.AccTwoEnc_Config(minPower, maxPower, accDist, decDist, totalDist)
   AdvMtCtrls.PD_Config(kP, kD, maxPower)
   done = 0
   Motor.ResetCount("BC")
   While done = 0
     Color.getLight(1, light1)
     Color.getLight(2, light2)
+    enc1 = Motor.GetCount("B")
+    enc2 = Motor.GetCount("C")
     AdvMtCtrls.AccTwoEnc(enc1, enc2, pOut, isDone)
     AdvMtCtrls.PD_pwrIn(pOut, light1, light2, p1Out, p2Out)
     Motor.StartPower("B", p1Out)
