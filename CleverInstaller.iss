@@ -1,6 +1,6 @@
 [Setup]
 AppName=Clever
-AppVersion=1.0
+AppVersion=1.1
 AppPublisher=p.spn_
 DefaultDirName=C:\clev3r
 DisableDirPage=no

@@ -86,6 +86,7 @@ EndFunction
 Function spinSee(in number kP, in number power, in number blackValue, in string isBreak)
   AdvMtCtrls.Sync_Config(kp, power, power*-1)
   Motor.ResetCount("BC")
+  Program.Delay(100)
   port = 2
   if power < 0 Then
     port = 1
@@ -110,7 +111,7 @@ Function spinSee(in number kP, in number power, in number blackValue, in string 
     Motor.StartPower("B", p1Out)
     Motor.StartPower("C", p2Out)
     Color.getLight(port, lightOut)
-    If lightOut >= blackValue+10 Then
+    If lightOut >= blackValue Then
       done = 0
     EndIf
     Program.Delay(10)
@@ -208,4 +209,35 @@ Function motorCtrl(in string port, in number power, in number degree)
     Program.Delay(10)
   EndWhile
   Motor.Stop(port, "True")
+EndFunction
+
+Function checkColor(in number port, out string colorOut)
+  color = ""
+  Color.getRGBW(port, redOut, greenOut, blueOut, whiteOut)
+  if redOut > greenOut and redOut > blueOut Then
+    Color.getRGBW(port, redOut, greenOut, blueOut, whiteOut)
+    raw = (((greenOut-blueOut)/blueOut)*200)-redOut
+    if raw > 45 Then
+      if greenOut >= 16 Then
+        color = "Yellow"
+      Else
+        color = "Red"
+      EndIf
+    Else
+      color = "Red"
+    EndIf
+  Else
+    Color.getRGBW(port, redOut, greenOut, blueOut, whiteOut)
+    if greenOut > redOut and greenOut > blueOut Then
+      color = "Green"
+    Else
+      Color.getRGBW(port, redOut, greenOut, blueOut, whiteOut)
+      if blueOut > redOut and greenOut > redOut Then
+        color = "Blue"
+      Else
+        color = "Yellow"
+      EndIf
+    EndIf
+  EndIf
+  colorOut = color
 EndFunction
