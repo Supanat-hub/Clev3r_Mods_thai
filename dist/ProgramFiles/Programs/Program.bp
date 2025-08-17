@@ -64,13 +64,14 @@ PongTools.setUp()
 
 PongTools.syncMove(0.11, 60, 60, 300, "false")
 Thread.Run = resetHand
-PongTools.lineTrack(0.4, 5.5, 100, 2500, "True")
+PongTools.lineTrack(0.4, 5.5, 100, 2450, "True")
 Thread.Run = motorTask
+Program.Delay(100)
 PongTools.smoothPort("B", 70, 100, 250, 250, 530) 'stall wall
 PongTools.moveUntilStall(55)
 PongTools.syncMove(0.11, -50, -50, 50, "True")
 PongTools.smoothPort("C", -40, -95, 250, 250, 555) 'turn to backward get 2 Sapan
-PongTools.smoothDrive(0.11, -20, -60, 150, "True", "True")
+PongTools.smoothDrive(0.11, -20, -60, 152, "True", "True")
 PongTools.runUntilStall("A", 100)
 PongTools.moveUntilStall(-55)                       'srall wall
 Motor.Stop("BC", "True")
@@ -83,12 +84,13 @@ PongTools.smoothPort("B", -30, -90, 130, 130, 290)
 PongTools.smoothDrive(0.09, -40, -90, 290, "True", "True")
 PongTools.motorCtrl("A", -95, 110)                  ' hand Up Yellow
 Thread.Run = forWard
-PongTools.smoothDrive(0.1, 40, 80, 350, "True", "True")
+PongTools.smoothDrive(0.1, 30, 80, 350, "True", "True")
+Program.Delay(80)
 PongTools.smoothPort("B", -40, -80, 240, 240, 500)
 PongTools.syncMove(0.09, 45, 45, 120, "True")
 Program.Delay(200)
 Speaker.Note(100, "A6", 200)
-PongTools.smoothDrive(0.09, -20, -70, 290, "True", "True")
+PongTools.smoothDrive(0.09, -20, -70, 300, "True", "True")
 PongTools.motorCtrl("A", -90, 160)                  '  hand Up Red
 Thread.Run = forWard2
 PongTools.smoothDrive(0.1, 25, 90, 940, "True", "True")
@@ -140,7 +142,7 @@ PongTools.syncMoveSee(0.11, 1, -45, 25, "True")
 PongTools.syncMove(0.11, 40, 40, 55, "True")
 PongTools.spinSee(0.11, -60, 20, "True")
 PongTools.smoothLineTrack(0.4, 5.5, 50, 100, 1500)
-PongTools.syncMove(0.11, 50, 50, 180, "Flase")
+PongTools.syncMove(0.11, 50, 50, 220, "Flase")
 PongTools.moveUntilStall(50)
 
 Program.End()
