@@ -1,6 +1,6 @@
 [Setup]
 AppName=Clever
-AppVersion=1.1
+AppVersion=1.2
 AppPublisher=p.spn_
 DefaultDirName=C:\clev3r
 DisableDirPage=no
@@ -14,8 +14,13 @@ Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
 
+[Tasks]
+Name: "darktheme"; Description: "Enable dark theme (Only change on text editor)"; GroupDescription: "Optional settings:"; Flags: checkedonce
+
 [Files]
-Source: "dist\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "dist\ProgramFiles\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "dist\setting\Setting.ini"; DestDir: "{userappdata}\Clever\1.7.0.0"; \
+    Flags: ignoreversion; Tasks: darktheme
 
 [Icons]
 Name: "{userdesktop}\Clever"; Filename: "{app}\Clever.exe"; WorkingDir: "{app}"; IconFilename: "{app}\Clever.exe"
