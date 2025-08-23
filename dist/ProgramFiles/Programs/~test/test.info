@@ -1,0 +1,9 @@
+FOLDER_KEY PRJS
+FOLDER_NAME WRO2025
+IMAGE_LIST 0
+SOUND_LIST 4
+SOUND ; Red.rsf ; WRO2025/Media/ ; WRO2025/Media/Red.rsf
+SOUND ; Green.rsf ; WRO2025/Media/ ; WRO2025/Media/Green.rsf
+SOUND ; Blue.rsf ; WRO2025/Media/ ; WRO2025/Media/Blue.rsf
+SOUND ; Yellow.rsf ; WRO2025/Media/ ; WRO2025/Media/Yellow.rsf
+FILE_LIST 0

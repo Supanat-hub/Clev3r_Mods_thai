@@ -1,0 +1,4 @@
+LCD.Clear ()
+LCD.BmpFile ( 1 , 0 , 0 , "GraphicsAndSounds/Tired middle" )
+Speaker.Play ( 100 , "GraphicsAndSounds/yamyam" )
+Program.Delay ( 10000 )

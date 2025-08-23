@@ -10,8 +10,8 @@ Function smoothDrive(in number kP, in number minPower,in number maxPower, in num
     accDist = 300
     decDist = 300
   Else
-    accDist = totalDist*0.5
-    decDist = totalDist*0.5
+    decDist = totalDist*0.6
+    accDist = totalDist-decDist
   EndIf
   AdvMtCtrls.AccTwoEnc_Config(minPower, maxPower, accDist, decDist, totalDist)
   AdvMtCtrls.Sync_Config(kP, 50, 50)
@@ -29,7 +29,6 @@ Function smoothDrive(in number kP, in number minPower,in number maxPower, in num
     Motor.StartPower("B", p1Out)
     Motor.StartPower("C", p2Out)
     done = isDone
-    Program.Delay(10)
   EndWhile
   Motor.Stop("BC", isBreak)
 EndFunction
@@ -43,7 +42,6 @@ Function smoothPort(in string port, in number minPower,in number maxPower,in num
     AdvMtCtrls.AccOneEnc(enc, pOut, isDone)
     Motor.StartPower(port, pOut)
     done = isDone
-    Program.Delay(10)
   EndWhile
   Motor.Stop(port, "True")
 EndFunction
@@ -59,7 +57,6 @@ Function syncMove(in number kP, in number leftPower, in number rightPower, in nu
     Motor.StartPower("B", p1Out)
     Motor.StartPower("C", p2Out)
     dist = (Math.Abs(Motor.GetCount("B")) + Math.Abs(Motor.GetCount("C")))/2
-    Program.Delay(10)
   EndWhile
   Motor.Stop("BC", isBreak)
 EndFunction
@@ -111,7 +108,7 @@ Function spinSee(in number kP, in number power, in number blackValue, in string 
     Motor.StartPower("B", p1Out)
     Motor.StartPower("C", p2Out)
     Color.getLight(port, lightOut)
-    If lightOut >= blackValue Then
+    If lightOut > blackValue Then
       done = 0
     EndIf
     Program.Delay(10)
@@ -141,7 +138,7 @@ Function smoothLineTrack(in number kP, in number kD, in number minPower, in numb
     decDist = 300
   Else
     accDist = totalDist*0.5
-    decDist = totalDist*0.5
+    decDist = totalDist-accDist
   EndIf
   AdvMtCtrls.AccTwoEnc_Config(minPower, maxPower, accDist, decDist, totalDist)
   AdvMtCtrls.PD_Config(kP, kD, maxPower)
@@ -176,7 +173,6 @@ Function moveUntilStall(in number power)
     If enc1 - enc2 = 0 And enc3 - enc4 = 0 Then
       stall = 1
     EndIf
-    Program.Delay(10)
   EndWhile
   Motor.Stop("BC", "True")
 EndFunction
@@ -192,7 +188,6 @@ Function runUntilStall(in string port, in number power)
     If enc1 - enc2 = 0 Then
       stall = 1
     EndIf
-    Program.Delay(10)
   EndWhile
   Motor.Stop(port, "True")
 EndFunction
@@ -206,7 +201,6 @@ Function motorCtrl(in string port, in number power, in number degree)
     If enc >= degree Then
       done = 1
     EndIf
-    Program.Delay(10)
   EndWhile
   Motor.Stop(port, "True")
 EndFunction

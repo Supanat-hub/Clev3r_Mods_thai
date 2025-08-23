@@ -1,0 +1,198 @@
+folder "prjs""WRO2025" 'Define the Project Name
+
+import "Mods/PongTools"
+
+Sub motorTask
+  PongTools.motorCtrl("A", 100, 140)
+EndSub
+
+Sub resetHand
+  PongTools.runUntilStall("A", -70)
+  PongTools.motorCtrl("A", 100, 230)
+EndSub
+
+Sub forWard
+  Program.Delay(100)
+  PongTools.motorCtrl("A", 100, 65)
+  PongTools.runUntilStall("A", 100)
+EndSub
+
+Sub forWard2
+  PongTools.runUntilStall("A", -95)
+  PongTools.motorCtrl("A", 100, 240)
+EndSub
+
+Function speakColor (in string color)
+  if color = "Red" Then
+    Speaker.Play(100, "Red")
+  ElseIf color = "Green" Then
+    Speaker.Play(100, "Green")
+  ElseIf color = "Blue" Then
+    Speaker.Play(100, "Blue")
+  ElseIf color = "Yellow" Then
+    Speaker.Play(100, "Yellow")
+  EndIf
+EndFunction
+
+
+color1 = ""
+color2 = ""
+color3 = ""
+color4 = ""
+color = ""
+
+Sub speak1
+  speakColor(color1)
+  Program.Delay(320)
+  speakColor(color3)
+  Program.Delay(320)
+EndSub
+
+Sub speak2
+  speakColor(color2)
+  Program.Delay(320)
+  speakColor(color4)
+  Program.Delay(320)
+EndSub
+
+Sub speak3
+  speakColor(color)
+  Program.Delay(300)
+EndSub
+
+Sub payload
+  Program.Delay(600)
+  PongTools.runUntilStall("A", -100)
+EndSub
+
+Sub peeb
+  Speaker.Note(100, "A6", 200)
+EndSub
+
+Sub setMotorHouse
+  PongTools.runUntilStall("D", 50)
+  PongTools.motorCtrl("D", -80, 260)
+EndSub
+
+Sub setvangMotor
+  PongTools.motorCtrl("A", 80, 136)
+EndSub
+
+PongTools.setUp()
+
+PongTools.moveUntilStall(0)
+
+
+Function colorSort1 (in string color)
+  mM = 1
+  if color = "Red" Or color = "Yellow" Then
+    mM = 1
+  ElseIf color = "Green" Or color = "Blue" Then
+    mM = -1
+  EndIf
+  PongTools.runUntilStall("D", -50*mM)
+  
+  if color = "Red" Then
+    PongTools.smoothPort("D", 30, 60, 40, 100, 155)
+  ElseIf color = "Blue" Then
+    PongTools.smoothPort("D", -30, -60, 40, 100, 160)
+  ElseIf color = "Yellow" Then
+    Speaker.Play(100, "Yellow")
+  EndIf
+EndFunction
+
+Function colorSort2 (in string color1, in string color2)
+  if color1 = "Red" Then
+    if color2 = "Green" Then
+      PongTools.runUntilStall("D", 50)
+    ElseIf color2 = "Blue" Then
+      PongTools.smoothPort("D", 30, 60, 40, 90, 140)
+    ElseIf color2 = "Yellow" Then
+      PongTools.runUntilStall("D", -50)
+    EndIf
+  ElseIf color1 = "Green" Then
+    Speaker.Play(100, "Green")
+  ElseIf color1 = "Blue" Then
+    Speaker.Play(100, "Blue")
+  ElseIf color1 = "Yellow" Then
+    Speaker.Play(100, "Yellow")
+  EndIf
+EndFunction
+
+Function coloOut (in string color1, in string color2)
+  colorSort1(color1)
+  PongTools.motorCtrl("A", 100, 100)
+  PongTools.syncMove(0.11, -25, -25, 130, "True")
+  PongTools.motorCtrl("A", -60, 100)
+  PongTools.syncMove(0.11, 15, 15, 145, "True")
+  colorSort2(color1, color2)
+  PongTools.syncMove(0.11, -20, -20, 40, "True")
+  PongTools.motorCtrl("A", 100, 100)
+  PongTools.syncMove(0.11, -25, -25, 160, "True")
+  PongTools.motorCtrl("A", -60, 100)
+  PongTools.syncMove(0.11, 15, 15, 225, "True")
+  Program.Delay(100)
+EndFunction
+
+PongTools.moveUntilStall(0)
+'get house
+Thread.Run = setMotorHouse
+PongTools.moveUntilStall(-100)
+PongTools.syncMove(0.11, 45, 45, 113, "True")
+Program.Delay(100)
+PongTools.syncMove(0.11, -50, 50, 255, "True")
+Program.Delay(100)
+PongTools.syncMoveSee(0.11, 2, 60, 7, "True")
+Program.Delay(100)
+PongTools.motorCtrl("A", 100, 80)
+PongTools.runUntilStall("A", 100)
+PongTools.motorCtrl("A", -50, 40)
+PongTools.lineTrack(0.4, 5.5, 60, 280, "True")
+PongTools.syncMove(0.11, 40, 40, 145, "True")
+PongTools.motorCtrl("D", 50, 145)
+PongTools.syncMove(0.11, 40, 40, 165, "True")
+PongTools.motorCtrl("D", -50, 100)
+PongTools.motorCtrl("A", -50, 30)
+PongTools.moveUntilStall(55)
+PongTools.motorCtrl("A", -70, 130)
+PongTools.smoothDrive(0.11, -30, -70, 630, "True", "True")
+
+PongTools.syncMove(0.1, 55, -55, 252, "True")
+PongTools.smoothLineTrack(0.4, 5.5, 45, 80, 425)
+Program.Delay(100)
+PongTools.smoothPort("B", -25, -60, 140, 140, 310)
+Program.Delay(200)
+PongTools.syncMove(0.11, 55, 55, 208, "True")
+PongTools.runUntilStall("A", -100) '1st flag
+PongTools.motorCtrl("A", 100, 230)
+PongTools.syncMove(0.11, -25, -25, 55, "True")
+Program.Delay(200)
+PongTools.smoothPort("B", 20, 70, 70, 80, 295)
+Program.Delay(100)
+PongTools.smoothDrive(0.12, 20, 90, 460, "True", "True")
+Program.Delay(100)
+PongTools.smoothPort("C", 30, 80, 140, 140, 540)
+
+Thread.Run = setvangMotor
+PongTools.syncMove(0.11, 45, 45, 200, "False")
+PongTools.moveUntilStall(55)
+Program.Delay(100)
+PongTools.smoothDrive(0.11, -15, -30, 370, "True", "True")
+Program.Delay(100)
+PongTools.smoothPort("B", 20, 70, 100, 100, 340)
+Program.Delay(100)
+PongTools.syncMoveSee(0.11, 1, 16, 15, "True")
+Program.Delay(100)
+PongTools.syncMove(0.11, -30, -30, 155, "True")
+Program.Delay(100)
+PongTools.syncMove(0.11,  20, 20, 50, "True")
+Program.Delay(100)
+PongTools.motorCtrl("A", -60, 100)
+
+coloOut("Red", "Blue")
+PongTools.syncMove(0.11, -25, -25, 40, "True")
+Program.Delay(100)
+PongTools.smoothDrive(0.11, -15, -25, 120, "False", "True")
+Program.Delay(100)
+
+Program.End()

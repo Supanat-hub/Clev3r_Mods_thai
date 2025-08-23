@@ -1,0 +1,853 @@
+pr_advmtctrls_acc1_minpwr = 0
+pr_advmtctrls_acc1_maxpwr = 0
+pr_advmtctrls_acc1_acceldist = 0
+pr_advmtctrls_acc1_deceldist = 0
+pr_advmtctrls_acc1_totaldist = 0
+pr_advmtctrls_acc1_isneg = 0
+pr_advmtctrls_pwr = 0
+pr_advmtctrls_sync_kp = 0
+pr_advmtctrls_sync_vb = 0
+pr_advmtctrls_sync_vc = 0
+pr_advmtctrls_sync_vbsign = 0
+pr_advmtctrls_sync_vcsign = 0
+pr_advmtctrls_kp = 0
+pr_advmtctrls_kd = 0
+pr_advmtctrls_err_old = 0
+pr_advmtctrls_acc2_minpwr = 0
+pr_advmtctrls_acc2_maxpwr = 0
+pr_advmtctrls_acc2_acceldist = 0
+pr_advmtctrls_acc2_deceldist = 0
+pr_advmtctrls_acc2_totaldist = 0
+pr_advmtctrls_acc2_isneg = 0
+lv_power_8 = 0
+lv_kp_12 = 0
+lv_leftpower_12 = 0
+lv_rightpower_12 = 0
+lv_totaldist_12 = 0
+lv_isbreak_12 = ""
+lv_kp_15 = 0
+lv_port_15 = 0
+lv_power_15 = 0
+lv_blackvalue_15 = 0
+lv_isbreak_15 = ""
+lv_port_5 = ""
+lv_power_5 = 0
+lv_degree_5 = 0
+lv_port_6 = ""
+lv_power_6 = 0
+lv_kp_17 = 0
+lv_kd_17 = 0
+lv_power_17 = 0
+lv_totaldist_17 = 0
+lv_isbreak_17 = ""
+lv_kp_20 = 0
+lv_minpower_20 = 0
+lv_maxpower_20 = 0
+lv_totaldist_20 = 0
+lv_straight_20 = ""
+lv_isbreak_20 = ""
+lv_kp_24 = 0
+lv_kd_24 = 0
+lv_minpower_24 = 0
+lv_maxpower_24 = 0
+lv_totaldist_24 = 0
+lv_port_9 = ""
+lv_minpower_9 = 0
+lv_maxpower_9 = 0
+lv_accdist_9 = 0
+lv_decdist_9 = 0
+lv_totaldist_9 = 0
+lv_color1_4 = ""
+lv_color2_4 = ""
+lv_color_1 = ""
+lv_color_2 = ""
+lv_color1_3 = ""
+lv_color2_3 = ""
+lv_minpwr_in_10 = 0
+lv_maxpwr_in_10 = 0
+lv_acceldist_in_10 = 0
+lv_deceldist_in_10 = 0
+lv_totaldist_in_10 = 0
+lv_e1_11 = 0
+lv_pwrout_11 = 0
+lv_done_11 = 0
+lv_kp_in_13 = 0
+lv_vb_in_13 = 0
+lv_vc_in_13 = 0
+lv_eb_14 = 0
+lv_ec_14 = 0
+lv_pb_14 = 0
+lv_pc_14 = 0
+lv_port_16 = 0
+lv_value_16 = 0
+lv_kp_in_18 = 0
+lv_kd_in_18 = 0
+lv_pwr_in_18 = 0
+lv_e1_19 = 0
+lv_e2_19 = 0
+lv_pb_19 = 0
+lv_pc_19 = 0
+lv_minpwr_in_21 = 0
+lv_maxpwr_in_21 = 0
+lv_acceldist_in_21 = 0
+lv_deceldist_in_21 = 0
+lv_totaldist_in_21 = 0
+lv_e1_22 = 0
+lv_e2_22 = 0
+lv_pwrout_22 = 0
+lv_done_22 = 0
+lv_eb_23 = 0
+lv_ec_23 = 0
+lv_s_kp_23 = 0
+lv_vb_23 = 0
+lv_vc_23 = 0
+lv_pb_23 = 0
+lv_pc_23 = 0
+lv_pwrin_25 = 0
+lv_e1_25 = 0
+lv_e2_25 = 0
+lv_pb_25 = 0
+lv_pc_25 = 0
+lv_pout_9 = 0
+lv_isdone_9 = 0
+lv_p1out_12 = 0
+lv_p2out_12 = 0
+lv_p1out_15 = 0
+lv_p2out_15 = 0
+lv_lightout_15 = 0
+lv_light1_17 = 0
+lv_light2_17 = 0
+lv_p1out_17 = 0
+lv_p2out_17 = 0
+lv_pout_20 = 0
+lv_isdone_20 = 0
+lv_p1out_20 = 0
+lv_p2out_20 = 0
+lv_light1_24 = 0
+lv_light2_24 = 0
+lv_pout_24 = 0
+lv_isdone_24 = 0
+lv_p1out_24 = 0
+lv_p2out_24 = 0
+gv_color1 = ""
+gv_color2 = ""
+gv_color3 = ""
+gv_color4 = ""
+gv_color = ""
+gv_color1 = ""
+gv_color2 = ""
+gv_color3 = ""
+gv_color4 = ""
+gv_color = ""
+m_pongtools_setup_0 ()
+lv_power_8 = 0
+m_pongtools_moveuntilstall_1 ()
+lv_power_8 = 0
+m_pongtools_moveuntilstall_1 ()
+Thread.Run = f_setmotorhouse_0
+lv_power_8 = - 100
+m_pongtools_moveuntilstall_1 ()
+lv_kp_12 = 0.11
+lv_leftpower_12 = 45
+lv_rightpower_12 = 45
+lv_totaldist_12 = 113
+lv_isbreak_12 = "True"
+m_pongtools_syncmove_5 ()
+Program.Delay ( 100 )
+lv_kp_12 = 0.11
+lv_leftpower_12 = - 50
+lv_rightpower_12 = 50
+lv_totaldist_12 = 255
+lv_isbreak_12 = "True"
+m_pongtools_syncmove_5 ()
+Program.Delay ( 100 )
+lv_kp_15 = 0.11
+lv_port_15 = 2
+lv_power_15 = 60
+lv_blackvalue_15 = 7
+lv_isbreak_15 = "True"
+m_pongtools_syncmovesee_5 ()
+Program.Delay ( 100 )
+lv_port_5 = "A"
+lv_power_5 = 100
+lv_degree_5 = 80
+m_pongtools_motorctrl_3 ()
+lv_port_6 = "A"
+lv_power_6 = 100
+m_pongtools_rununtilstall_2 ()
+lv_port_5 = "A"
+lv_power_5 = - 50
+lv_degree_5 = 40
+m_pongtools_motorctrl_3 ()
+lv_kp_17 = 0.4
+lv_kd_17 = 5.5
+lv_power_17 = 60
+lv_totaldist_17 = 280
+lv_isbreak_17 = "True"
+m_pongtools_linetrack_5 ()
+lv_kp_12 = 0.11
+lv_leftpower_12 = 40
+lv_rightpower_12 = 40
+lv_totaldist_12 = 145
+lv_isbreak_12 = "True"
+m_pongtools_syncmove_5 ()
+lv_port_5 = "D"
+lv_power_5 = 50
+lv_degree_5 = 145
+m_pongtools_motorctrl_3 ()
+lv_kp_12 = 0.11
+lv_leftpower_12 = 40
+lv_rightpower_12 = 40
+lv_totaldist_12 = 165
+lv_isbreak_12 = "True"
+m_pongtools_syncmove_5 ()
+lv_port_5 = "D"
+lv_power_5 = - 50
+lv_degree_5 = 100
+m_pongtools_motorctrl_3 ()
+lv_port_5 = "A"
+lv_power_5 = - 50
+lv_degree_5 = 30
+m_pongtools_motorctrl_3 ()
+lv_power_8 = 55
+m_pongtools_moveuntilstall_1 ()
+lv_port_5 = "A"
+lv_power_5 = - 70
+lv_degree_5 = 130
+m_pongtools_motorctrl_3 ()
+lv_kp_20 = 0.11
+lv_minpower_20 = - 30
+lv_maxpower_20 = - 70
+lv_totaldist_20 = 630
+lv_straight_20 = "True"
+lv_isbreak_20 = "True"
+m_pongtools_smoothdrive_6 ()
+lv_kp_12 = 0.1
+lv_leftpower_12 = 55
+lv_rightpower_12 = - 55
+lv_totaldist_12 = 252
+lv_isbreak_12 = "True"
+m_pongtools_syncmove_5 ()
+lv_kp_24 = 0.4
+lv_kd_24 = 5.5
+lv_minpower_24 = 45
+lv_maxpower_24 = 80
+lv_totaldist_24 = 425
+m_pongtools_smoothlinetrack_5 ()
+Program.Delay ( 100 )
+lv_port_9 = "B"
+lv_minpower_9 = - 25
+lv_maxpower_9 = - 60
+lv_accdist_9 = 140
+lv_decdist_9 = 140
+lv_totaldist_9 = 310
+m_pongtools_smoothport_6 ()
+Program.Delay ( 200 )
+lv_kp_12 = 0.11
+lv_leftpower_12 = 55
+lv_rightpower_12 = 55
+lv_totaldist_12 = 208
+lv_isbreak_12 = "True"
+m_pongtools_syncmove_5 ()
+lv_port_6 = "A"
+lv_power_6 = - 100
+m_pongtools_rununtilstall_2 ()
+lv_port_5 = "A"
+lv_power_5 = 100
+lv_degree_5 = 230
+m_pongtools_motorctrl_3 ()
+lv_kp_12 = 0.11
+lv_leftpower_12 = - 25
+lv_rightpower_12 = - 25
+lv_totaldist_12 = 55
+lv_isbreak_12 = "True"
+m_pongtools_syncmove_5 ()
+Program.Delay ( 200 )
+lv_port_9 = "B"
+lv_minpower_9 = 20
+lv_maxpower_9 = 70
+lv_accdist_9 = 70
+lv_decdist_9 = 80
+lv_totaldist_9 = 295
+m_pongtools_smoothport_6 ()
+Program.Delay ( 100 )
+lv_kp_20 = 0.12
+lv_minpower_20 = 20
+lv_maxpower_20 = 90
+lv_totaldist_20 = 460
+lv_straight_20 = "True"
+lv_isbreak_20 = "True"
+m_pongtools_smoothdrive_6 ()
+Program.Delay ( 100 )
+lv_port_9 = "C"
+lv_minpower_9 = 30
+lv_maxpower_9 = 80
+lv_accdist_9 = 140
+lv_decdist_9 = 140
+lv_totaldist_9 = 530
+m_pongtools_smoothport_6 ()
+Thread.Run = f_setvangmotor_0
+lv_kp_12 = 0.11
+lv_leftpower_12 = 45
+lv_rightpower_12 = 45
+lv_totaldist_12 = 200
+lv_isbreak_12 = "False"
+m_pongtools_syncmove_5 ()
+lv_power_8 = 55
+m_pongtools_moveuntilstall_1 ()
+Program.Delay ( 100 )
+lv_kp_20 = 0.11
+lv_minpower_20 = - 15
+lv_maxpower_20 = - 30
+lv_totaldist_20 = 370
+lv_straight_20 = "True"
+lv_isbreak_20 = "True"
+m_pongtools_smoothdrive_6 ()
+Program.Delay ( 100 )
+lv_port_9 = "B"
+lv_minpower_9 = 20
+lv_maxpower_9 = 70
+lv_accdist_9 = 100
+lv_decdist_9 = 100
+lv_totaldist_9 = 340
+m_pongtools_smoothport_6 ()
+Program.Delay ( 100 )
+lv_kp_15 = 0.11
+lv_port_15 = 1
+lv_power_15 = 16
+lv_blackvalue_15 = 15
+lv_isbreak_15 = "True"
+m_pongtools_syncmovesee_5 ()
+Program.Delay ( 100 )
+lv_kp_12 = 0.11
+lv_leftpower_12 = - 30
+lv_rightpower_12 = - 30
+lv_totaldist_12 = 155
+lv_isbreak_12 = "True"
+m_pongtools_syncmove_5 ()
+Program.Delay ( 100 )
+lv_kp_12 = 0.11
+lv_leftpower_12 = 20
+lv_rightpower_12 = 20
+lv_totaldist_12 = 50
+lv_isbreak_12 = "True"
+m_pongtools_syncmove_5 ()
+Program.Delay ( 100 )
+lv_port_5 = "A"
+lv_power_5 = - 60
+lv_degree_5 = 100
+m_pongtools_motorctrl_3 ()
+lv_color1_4 = "Red"
+lv_color2_4 = "Blue"
+f_coloout_2 ()
+lv_kp_12 = 0.11
+lv_leftpower_12 = - 25
+lv_rightpower_12 = - 25
+lv_totaldist_12 = 40
+lv_isbreak_12 = "True"
+m_pongtools_syncmove_5 ()
+Program.Delay ( 100 )
+lv_kp_20 = 0.11
+lv_minpower_20 = - 15
+lv_maxpower_20 = - 25
+lv_totaldist_20 = 120
+lv_straight_20 = "False"
+lv_isbreak_20 = "True"
+m_pongtools_smoothdrive_6 ()
+Program.Delay ( 100 )
+Program.End ()
+Sub f_setmotorhouse_0
+lv_port_6 = "D"
+lv_power_6 = 50
+m_pongtools_rununtilstall_2 ()
+lv_port_5 = "D"
+lv_power_5 = - 80
+lv_degree_5 = 260
+m_pongtools_motorctrl_3 ()
+EndSub
+Sub f_setvangmotor_0
+lv_port_5 = "A"
+lv_power_5 = 80
+lv_degree_5 = 136
+m_pongtools_motorctrl_3 ()
+EndSub
+Sub f_speakcolor_1
+if lv_color_1 = "Red" Then
+Speaker.Play ( 100 , "WRO2025/Media/Red" )
+ElseIf lv_color_1 = "Green" Then
+Speaker.Play ( 100 , "WRO2025/Media/Green" )
+ElseIf lv_color_1 = "Blue" Then
+Speaker.Play ( 100 , "WRO2025/Media/Blue" )
+ElseIf lv_color_1 = "Yellow" Then
+Speaker.Play ( 100 , "WRO2025/Media/Yellow" )
+EndIf
+EndSub
+Sub f_colorsort1_1
+lv_mm_2 = 1
+if lv_color_2 = "Red" Or lv_color_2 = "Yellow" Then
+lv_mm_2 = 1
+ElseIf lv_color_2 = "Green" Or lv_color_2 = "Blue" Then
+lv_mm_2 = - 1
+EndIf
+lv_port_6 = "D"
+lv_power_6 = - 50 * lv_mm_2
+m_pongtools_rununtilstall_2 ()
+if lv_color_2 = "Red" Then
+lv_port_9 = "D"
+lv_minpower_9 = 30
+lv_maxpower_9 = 60
+lv_accdist_9 = 40
+lv_decdist_9 = 100
+lv_totaldist_9 = 155
+m_pongtools_smoothport_6 ()
+ElseIf lv_color_2 = "Blue" Then
+lv_port_9 = "D"
+lv_minpower_9 = - 30
+lv_maxpower_9 = - 60
+lv_accdist_9 = 40
+lv_decdist_9 = 100
+lv_totaldist_9 = 160
+m_pongtools_smoothport_6 ()
+ElseIf lv_color_2 = "Yellow" Then
+Speaker.Play ( 100 , "WRO2025/Media/Yellow" )
+EndIf
+EndSub
+Sub f_colorsort2_2
+if lv_color1_3 = "Red" Then
+if lv_color2_3 = "Green" Then
+lv_port_6 = "D"
+lv_power_6 = 50
+m_pongtools_rununtilstall_2 ()
+ElseIf lv_color2_3 = "Blue" Then
+lv_port_9 = "D"
+lv_minpower_9 = 30
+lv_maxpower_9 = 60
+lv_accdist_9 = 40
+lv_decdist_9 = 90
+lv_totaldist_9 = 140
+m_pongtools_smoothport_6 ()
+ElseIf lv_color2_3 = "Yellow" Then
+lv_port_6 = "D"
+lv_power_6 = - 50
+m_pongtools_rununtilstall_2 ()
+EndIf
+ElseIf lv_color1_3 = "Green" Then
+Speaker.Play ( 100 , "WRO2025/Media/Green" )
+ElseIf lv_color1_3 = "Blue" Then
+Speaker.Play ( 100 , "WRO2025/Media/Blue" )
+ElseIf lv_color1_3 = "Yellow" Then
+Speaker.Play ( 100 , "WRO2025/Media/Yellow" )
+EndIf
+EndSub
+Sub f_coloout_2
+lv_color_2 = lv_color1_4
+f_colorsort1_1 ()
+lv_port_5 = "A"
+lv_power_5 = 100
+lv_degree_5 = 100
+m_pongtools_motorctrl_3 ()
+lv_kp_12 = 0.11
+lv_leftpower_12 = - 25
+lv_rightpower_12 = - 25
+lv_totaldist_12 = 130
+lv_isbreak_12 = "True"
+m_pongtools_syncmove_5 ()
+lv_port_5 = "A"
+lv_power_5 = - 60
+lv_degree_5 = 100
+m_pongtools_motorctrl_3 ()
+lv_kp_12 = 0.11
+lv_leftpower_12 = 15
+lv_rightpower_12 = 15
+lv_totaldist_12 = 145
+lv_isbreak_12 = "True"
+m_pongtools_syncmove_5 ()
+lv_color1_3 = lv_color1_4
+lv_color2_3 = lv_color2_4
+f_colorsort2_2 ()
+lv_kp_12 = 0.11
+lv_leftpower_12 = - 20
+lv_rightpower_12 = - 20
+lv_totaldist_12 = 40
+lv_isbreak_12 = "True"
+m_pongtools_syncmove_5 ()
+lv_port_5 = "A"
+lv_power_5 = 100
+lv_degree_5 = 100
+m_pongtools_motorctrl_3 ()
+lv_kp_12 = 0.11
+lv_leftpower_12 = - 25
+lv_rightpower_12 = - 25
+lv_totaldist_12 = 160
+lv_isbreak_12 = "True"
+m_pongtools_syncmove_5 ()
+lv_port_5 = "A"
+lv_power_5 = - 60
+lv_degree_5 = 100
+m_pongtools_motorctrl_3 ()
+lv_kp_12 = 0.11
+lv_leftpower_12 = 15
+lv_rightpower_12 = 15
+lv_totaldist_12 = 225
+lv_isbreak_12 = "True"
+m_pongtools_syncmove_5 ()
+Program.Delay ( 100 )
+EndSub
+Sub m_pongtools_motorctrl_3
+Motor.ResetCount ( lv_port_5 )
+lv_done_5 = 0
+While lv_done_5 = 0
+Motor.StartPower ( lv_port_5 , lv_power_5 )
+lv_enc_5 = Math.Abs ( Motor.GetCount ( lv_port_5 ) )
+If lv_enc_5 >= lv_degree_5 Then
+lv_done_5 = 1
+EndIf
+EndWhile
+Motor.Stop ( lv_port_5 , "True" )
+EndSub
+Sub m_pongtools_rununtilstall_2
+Motor.ResetCount ( lv_port_6 )
+lv_stall_6 = 0
+While lv_stall_6 = 0
+lv_enc1_6 = Motor.GetCount ( lv_port_6 )
+Motor.StartPower ( lv_port_6 , lv_power_6 )
+Program.Delay ( 100 )
+lv_enc2_6 = Motor.GetCount ( lv_port_6 )
+If lv_enc1_6 - lv_enc2_6 = 0 Then
+lv_stall_6 = 1
+EndIf
+EndWhile
+Motor.Stop ( lv_port_6 , "True" )
+EndSub
+Sub m_pongtools_setup_0
+Motor.Invert ( "B" )
+EndSub
+Sub m_pongtools_moveuntilstall_1
+Motor.ResetCount ( "BC" )
+lv_stall_8 = 0
+While lv_stall_8 = 0
+lv_enc1_8 = Motor.GetCount ( "B" )
+lv_enc3_8 = Motor.GetCount ( "C" )
+Motor.StartPower ( "B" , lv_power_8 )
+Motor.StartPower ( "C" , lv_power_8 )
+Program.Delay ( 100 )
+lv_enc2_8 = Motor.GetCount ( "B" )
+lv_enc4_8 = Motor.GetCount ( "C" )
+If lv_enc1_8 - lv_enc2_8 = 0 And lv_enc3_8 - lv_enc4_8 = 0 Then
+lv_stall_8 = 1
+EndIf
+EndWhile
+Motor.Stop ( "BC" , "True" )
+EndSub
+Sub m_pongtools_smoothport_6
+lv_minpwr_in_10 = lv_minpower_9
+lv_maxpwr_in_10 = lv_maxpower_9
+lv_acceldist_in_10 = lv_accdist_9
+lv_deceldist_in_10 = lv_decdist_9
+lv_totaldist_in_10 = lv_totaldist_9
+m_advmtctrls_acconeenc_config_5 ()
+Motor.ResetCount ( lv_port_9 )
+lv_done_9 = 0
+While lv_done_9 = 0
+lv_enc_9 = Motor.GetCount ( lv_port_9 )
+lv_e1_11 = lv_enc_9
+m_advmtctrls_acconeenc_3 ()
+lv_pout_9 = lv_pwrout_11
+lv_isdone_9 = lv_done_11
+Motor.StartPower ( lv_port_9 , lv_pout_9 )
+lv_done_9 = lv_isdone_9
+EndWhile
+Motor.Stop ( lv_port_9 , "True" )
+EndSub
+Sub m_advmtctrls_acconeenc_config_5
+pr_advmtctrls_acc1_minpwr = Math.Abs ( lv_minpwr_in_10 )
+pr_advmtctrls_acc1_maxpwr = Math.Abs ( lv_maxpwr_in_10 )
+pr_advmtctrls_acc1_acceldist = lv_acceldist_in_10
+pr_advmtctrls_acc1_deceldist = lv_deceldist_in_10
+pr_advmtctrls_acc1_totaldist = lv_totaldist_in_10
+If lv_minpwr_in_10 < 0 Then
+pr_advmtctrls_acc1_isneg = 1
+Else
+pr_advmtctrls_acc1_isneg = 0
+EndIf
+EndSub
+Sub m_advmtctrls_acconeenc_3
+lv_currenc_11 = Math.Abs ( lv_e1_11 )
+If lv_currenc_11 >= pr_advmtctrls_acc1_totaldist Then
+lv_done_11 = 1
+ElseIf lv_currenc_11 > pr_advmtctrls_acc1_totaldist / 2 Then
+If pr_advmtctrls_acc1_deceldist = 0 Then
+pr_advmtctrls_pwr = pr_advmtctrls_acc1_maxpwr
+Else
+pr_advmtctrls_pwr = ( pr_advmtctrls_acc1_maxpwr - pr_advmtctrls_acc1_minpwr ) / Math.Power ( pr_advmtctrls_acc1_deceldist , 2 ) * Math.Power ( lv_currenc_11 - pr_advmtctrls_acc1_totaldist , 2 ) + pr_advmtctrls_acc1_minpwr
+EndIf
+lv_done_11 = 0
+Else
+If pr_advmtctrls_acc1_acceldist = 0 Then
+pr_advmtctrls_pwr = pr_advmtctrls_acc1_maxpwr
+Else
+pr_advmtctrls_pwr = ( pr_advmtctrls_acc1_maxpwr - pr_advmtctrls_acc1_minpwr ) / Math.Power ( pr_advmtctrls_acc1_acceldist , 2 ) * Math.Power ( lv_currenc_11 - 0 , 2 ) + pr_advmtctrls_acc1_minpwr
+EndIf
+lv_done_11 = 0
+EndIf
+If pr_advmtctrls_pwr < pr_advmtctrls_acc1_minpwr Then
+pr_advmtctrls_pwr = pr_advmtctrls_acc1_minpwr
+ElseIf pr_advmtctrls_pwr > pr_advmtctrls_acc1_maxpwr Then
+pr_advmtctrls_pwr = pr_advmtctrls_acc1_maxpwr
+EndIf
+If pr_advmtctrls_acc1_isneg = 1 Then
+lv_pwrout_11 = 0 - pr_advmtctrls_pwr
+Else
+lv_pwrout_11 = pr_advmtctrls_pwr
+EndIf
+EndSub
+Sub m_pongtools_syncmove_5
+lv_kp_in_13 = lv_kp_12
+lv_vb_in_13 = lv_leftpower_12
+lv_vc_in_13 = lv_rightpower_12
+m_advmtctrls_sync_config_3 ()
+Motor.ResetCount ( "BC" )
+lv_dist_12 = 0
+While lv_dist_12 < lv_totaldist_12
+lv_enc1_12 = Motor.GetCount ( "B" )
+lv_enc2_12 = Motor.GetCount ( "C" )
+lv_eb_14 = lv_enc1_12
+lv_ec_14 = lv_enc2_12
+m_advmtctrls_sync_4 ()
+lv_p1out_12 = lv_pb_14
+lv_p2out_12 = lv_pc_14
+Motor.StartPower ( "B" , lv_p1out_12 )
+Motor.StartPower ( "C" , lv_p2out_12 )
+lv_dist_12 = ( Math.Abs ( Motor.GetCount ( "B" ) ) + Math.Abs ( Motor.GetCount ( "C" ) ) ) / 2
+EndWhile
+Motor.Stop ( "BC" , lv_isbreak_12 )
+EndSub
+Sub m_advmtctrls_sync_config_3
+pr_advmtctrls_sync_kp = lv_kp_in_13
+pr_advmtctrls_sync_vb = lv_vb_in_13
+pr_advmtctrls_sync_vc = lv_vc_in_13
+pr_advmtctrls_sync_vbsign = Math.Abs ( lv_vb_in_13 + 1 ) - Math.Abs ( lv_vb_in_13 )
+pr_advmtctrls_sync_vcsign = Math.Abs ( lv_vc_in_13 + 1 ) - Math.Abs ( lv_vc_in_13 )
+EndSub
+Sub m_advmtctrls_sync_4
+lv_u_14 = ( ( pr_advmtctrls_sync_vc * lv_eb_14 ) - ( pr_advmtctrls_sync_vb * lv_ec_14 ) ) * pr_advmtctrls_sync_kp
+lv_pb_14 = pr_advmtctrls_sync_vb - pr_advmtctrls_sync_vcsign * lv_u_14
+lv_pc_14 = pr_advmtctrls_sync_vc + pr_advmtctrls_sync_vbsign * lv_u_14
+EndSub
+Sub m_pongtools_syncmovesee_5
+lv_kp_in_13 = lv_kp_15
+lv_vb_in_13 = lv_power_15
+lv_vc_in_13 = lv_power_15
+m_advmtctrls_sync_config_3 ()
+Motor.ResetCount ( "BC" )
+lv_done_15 = 0
+While lv_done_15 = 0
+lv_enc1_15 = Motor.GetCount ( "B" )
+lv_enc2_15 = Motor.GetCount ( "C" )
+lv_eb_14 = lv_enc1_15
+lv_ec_14 = lv_enc2_15
+m_advmtctrls_sync_4 ()
+lv_p1out_15 = lv_pb_14
+lv_p2out_15 = lv_pc_14
+Motor.StartPower ( "B" , lv_p1out_15 )
+Motor.StartPower ( "C" , lv_p2out_15 )
+lv_port_16 = lv_port_15
+m_color_getlight_2 ()
+lv_lightout_15 = lv_value_16
+If lv_lightout_15 <= lv_blackvalue_15 Then
+lv_done_15 = 1
+EndIf
+Program.Delay ( 10 )
+EndWhile
+Motor.Stop ( "BC" , lv_isbreak_15 )
+EndSub
+Sub m_color_getlight_2
+Sensor.SetMode ( lv_port_16 , 0 )
+lv_value_16 = Sensor.ReadRawValue ( lv_port_16 , 0 )
+EndSub
+Sub m_pongtools_linetrack_5
+lv_kp_in_18 = lv_kp_17
+lv_kd_in_18 = lv_kd_17
+lv_pwr_in_18 = lv_power_17
+m_advmtctrls_pd_config_3 ()
+lv_dist_17 = 0
+Motor.ResetCount ( "BC" )
+While lv_dist_17 < lv_totaldist_17
+lv_port_16 = 1
+m_color_getlight_2 ()
+lv_light1_17 = lv_value_16
+lv_port_16 = 2
+m_color_getlight_2 ()
+lv_light2_17 = lv_value_16
+lv_e1_19 = lv_light1_17
+lv_e2_19 = lv_light2_17
+m_advmtctrls_pd_4 ()
+lv_p1out_17 = lv_pb_19
+lv_p2out_17 = lv_pc_19
+Motor.StartPower ( "B" , lv_p1out_17 )
+Motor.StartPower ( "C" , lv_p2out_17 )
+lv_dist_17 = ( Math.Abs ( Motor.GetCount ( "B" ) ) + Math.Abs ( Motor.GetCount ( "C" ) ) ) / 2
+Program.Delay ( 10 )
+EndWhile
+Motor.Stop ( "BC" , lv_isbreak_17 )
+EndSub
+Sub m_advmtctrls_pd_config_3
+pr_advmtctrls_kp = lv_kp_in_18
+pr_advmtctrls_kd = lv_kd_in_18
+pr_advmtctrls_pwr = lv_pwr_in_18
+pr_advmtctrls_err_old = 0
+EndSub
+Sub m_advmtctrls_pd_4
+lv_err_19 = lv_e1_19 - lv_e2_19
+lv_u_19 = lv_err_19 * pr_advmtctrls_kp + ( lv_err_19 - pr_advmtctrls_err_old ) * pr_advmtctrls_kd
+lv_pb_19 = pr_advmtctrls_pwr + lv_u_19
+lv_pc_19 = pr_advmtctrls_pwr - lv_u_19
+pr_advmtctrls_err_old = lv_err_19
+EndSub
+Sub m_pongtools_smoothdrive_6
+If lv_totaldist_20 * 0.5 >= 300 Then
+lv_accdist_20 = 300
+lv_decdist_20 = 300
+Else
+lv_decdist_20 = lv_totaldist_20 * 0.6
+lv_accdist_20 = lv_totaldist_20 - lv_decdist_20
+EndIf
+lv_minpwr_in_21 = lv_minpower_20
+lv_maxpwr_in_21 = lv_maxpower_20
+lv_acceldist_in_21 = lv_accdist_20
+lv_deceldist_in_21 = lv_decdist_20
+lv_totaldist_in_21 = lv_totaldist_20
+m_advmtctrls_acctwoenc_config_5 ()
+lv_kp_in_13 = lv_kp_20
+lv_vb_in_13 = 50
+lv_vc_in_13 = 50
+m_advmtctrls_sync_config_3 ()
+Motor.ResetCount ( "BC" )
+lv_mp_20 = 1
+If lv_straight_20 = "False" Then
+lv_mp_20 = - 1
+EndIf
+lv_done_20 = 0
+While lv_done_20 = 0
+lv_enc1_20 = Motor.GetCount ( "B" )
+lv_enc2_20 = Motor.GetCount ( "C" )
+lv_e1_22 = lv_enc1_20
+lv_e2_22 = lv_enc2_20
+m_advmtctrls_acctwoenc_4 ()
+lv_pout_20 = lv_pwrout_22
+lv_isdone_20 = lv_done_22
+lv_eb_23 = lv_enc1_20
+lv_ec_23 = lv_enc2_20
+lv_s_kp_23 = lv_kp_20
+lv_vb_23 = lv_pout_20 * lv_mp_20
+lv_vc_23 = lv_pout_20
+m_advmtctrls_sync_pwrin_7 ()
+lv_p1out_20 = lv_pb_23
+lv_p2out_20 = lv_pc_23
+Motor.StartPower ( "B" , lv_p1out_20 )
+Motor.StartPower ( "C" , lv_p2out_20 )
+lv_done_20 = lv_isdone_20
+EndWhile
+Motor.Stop ( "BC" , lv_isbreak_20 )
+EndSub
+Sub m_advmtctrls_acctwoenc_config_5
+pr_advmtctrls_acc2_minpwr = Math.Abs ( lv_minpwr_in_21 )
+pr_advmtctrls_acc2_maxpwr = Math.Abs ( lv_maxpwr_in_21 )
+pr_advmtctrls_acc2_acceldist = lv_acceldist_in_21
+pr_advmtctrls_acc2_deceldist = lv_deceldist_in_21
+pr_advmtctrls_acc2_totaldist = lv_totaldist_in_21
+If lv_minpwr_in_21 < 0 Then
+pr_advmtctrls_acc2_isneg = 1
+Else
+pr_advmtctrls_acc2_isneg = 0
+EndIf
+EndSub
+Sub m_advmtctrls_acctwoenc_4
+lv_currenc_22 = ( Math.Abs ( lv_e1_22 ) + Math.Abs ( lv_e2_22 ) ) / 2
+If lv_currenc_22 >= pr_advmtctrls_acc2_totaldist Then
+lv_done_22 = 1
+ElseIf lv_currenc_22 > pr_advmtctrls_acc2_totaldist / 2 Then
+If pr_advmtctrls_acc2_deceldist = 0 Then
+pr_advmtctrls_pwr = pr_advmtctrls_acc2_maxpwr
+Else
+pr_advmtctrls_pwr = ( pr_advmtctrls_acc2_maxpwr - pr_advmtctrls_acc2_minpwr ) / Math.Power ( pr_advmtctrls_acc2_deceldist , 2 ) * Math.Power ( lv_currenc_22 - pr_advmtctrls_acc2_totaldist , 2 ) + pr_advmtctrls_acc2_minpwr
+EndIf
+lv_done_22 = 0
+Else
+If pr_advmtctrls_acc2_acceldist = 0 Then
+pr_advmtctrls_pwr = pr_advmtctrls_acc2_maxpwr
+Else
+pr_advmtctrls_pwr = ( pr_advmtctrls_acc2_maxpwr - pr_advmtctrls_acc2_minpwr ) / Math.Power ( pr_advmtctrls_acc2_acceldist , 2 ) * Math.Power ( lv_currenc_22 - 0 , 2 ) + pr_advmtctrls_acc2_minpwr
+EndIf
+lv_done_22 = 0
+EndIf
+If pr_advmtctrls_pwr < pr_advmtctrls_acc2_minpwr Then
+pr_advmtctrls_pwr = pr_advmtctrls_acc2_minpwr
+ElseIf pr_advmtctrls_pwr > pr_advmtctrls_acc2_maxpwr Then
+pr_advmtctrls_pwr = pr_advmtctrls_acc2_maxpwr
+EndIf
+If pr_advmtctrls_acc2_isneg = 1 Then
+lv_pwrout_22 = 0 - pr_advmtctrls_pwr
+Else
+lv_pwrout_22 = pr_advmtctrls_pwr
+EndIf
+EndSub
+Sub m_advmtctrls_sync_pwrin_7
+lv_u_23 = ( ( lv_vc_23 * lv_eb_23 ) - ( lv_vb_23 * lv_ec_23 ) ) * lv_s_kp_23
+lv_pb_23 = lv_vb_23 - ( Math.Abs ( lv_vc_23 + 1 ) - Math.Abs ( lv_vc_23 ) ) * lv_u_23
+lv_pc_23 = lv_vc_23 + ( Math.Abs ( lv_vb_23 + 1 ) - Math.Abs ( lv_vb_23 ) ) * lv_u_23
+EndSub
+Sub m_pongtools_smoothlinetrack_5
+If lv_totaldist_24 * 0.5 >= 300 Then
+lv_accdist_24 = 300
+lv_decdist_24 = 300
+Else
+lv_accdist_24 = lv_totaldist_24 * 0.5
+lv_decdist_24 = lv_totaldist_24 - lv_accdist_24
+EndIf
+lv_minpwr_in_21 = lv_minpower_24
+lv_maxpwr_in_21 = lv_maxpower_24
+lv_acceldist_in_21 = lv_accdist_24
+lv_deceldist_in_21 = lv_decdist_24
+lv_totaldist_in_21 = lv_totaldist_24
+m_advmtctrls_acctwoenc_config_5 ()
+lv_kp_in_18 = lv_kp_24
+lv_kd_in_18 = lv_kd_24
+lv_pwr_in_18 = lv_maxpower_24
+m_advmtctrls_pd_config_3 ()
+lv_done_24 = 0
+Motor.ResetCount ( "BC" )
+While lv_done_24 = 0
+lv_port_16 = 1
+m_color_getlight_2 ()
+lv_light1_24 = lv_value_16
+lv_port_16 = 2
+m_color_getlight_2 ()
+lv_light2_24 = lv_value_16
+lv_enc1_24 = Motor.GetCount ( "B" )
+lv_enc2_24 = Motor.GetCount ( "C" )
+lv_e1_22 = lv_enc1_24
+lv_e2_22 = lv_enc2_24
+m_advmtctrls_acctwoenc_4 ()
+lv_pout_24 = lv_pwrout_22
+lv_isdone_24 = lv_done_22
+lv_pwrin_25 = lv_pout_24
+lv_e1_25 = lv_light1_24
+lv_e2_25 = lv_light2_24
+m_advmtctrls_pd_pwrin_5 ()
+lv_p1out_24 = lv_pb_25
+lv_p2out_24 = lv_pc_25
+Motor.StartPower ( "B" , lv_p1out_24 )
+Motor.StartPower ( "C" , lv_p2out_24 )
+lv_done_24 = lv_isdone_24
+Program.Delay ( 10 )
+EndWhile
+Motor.Stop ( "BC" , "True" )
+EndSub
+Sub m_advmtctrls_pd_pwrin_5
+lv_err_25 = lv_e1_25 - lv_e2_25
+lv_u_25 = lv_err_25 * pr_advmtctrls_kp + ( lv_err_25 - pr_advmtctrls_err_old ) * pr_advmtctrls_kd
+lv_pb_25 = lv_pwrin_25 + lv_u_25
+lv_pc_25 = lv_pwrin_25 - lv_u_25
+pr_advmtctrls_err_old = lv_err_25
+EndSub
